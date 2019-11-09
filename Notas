@@ -1,0 +1,10 @@
+// VERSIONES DE ANGULAR
+x.0.0
+// Versión mayor, puede ser o no retro compatible
+
+0.x.0
+//actualización menor, agrega funciones, retro compatible
+
+0.0.x
+// Parches, retro compatible, arreglo de errores.
+

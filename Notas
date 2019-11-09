@@ -8,3 +8,24 @@ x.0.0
 0.0.x
 // Parches, retro compatible, arreglo de errores.
 
+// INSTALACIONES NECESARIAS
+    NODE : (me) 12.10.0
+    GoogleChrome : (me) i.d.k
+    TypeScript : (me) 3.7.2
+        .:Instalación:.
+        $npm install -g typescript
+
+        .:Compilación:.
+        $tsc <file>
+        $tsc <file> -w (observador)
+        $tsc -init (inicia un proyecto de Tc)
+
+    AngularCli : (me) 8.3.18
+        .:Instalación:.
+        $npm install -g @angular/cli
+
+    Ionic : (me) 5.4.5
+        .:Instalación:.
+        $npm install -g ionic
+
+// TypeScript & ES6

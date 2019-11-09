@@ -16,6 +16,7 @@ x.0.0
         $npm install -g typescript
 
         .:Compilación:.
+        $tsc
         $tsc <file>
         $tsc <file> -w (observador)
         $tsc -init (inicia un proyecto de Tc)
@@ -29,3 +30,22 @@ x.0.0
         $npm install -g ionic
 
 // TypeScript & ES6
+
+// LET
+    Funciona de manera local en los bloques de codigo
+    al terminar dicho bloque la variable let desaparece.
+
+// CONST
+    Define el valor de una variable inmutables, del mismo modo
+    al ser definidas deben ser declaradas con su valor,
+    funcionan por bloques al igual que la variable let.
+
+// JavaScript
+    .:Caracteristicas faltantes:.
+    > Tipos de Variables.
+    > Errores en tiempo de escritura.
+    > Auto Completacion dependiendo de la variable.
+    > Método estático de programación.
+
+    # Javascript es 80% de TypeScript
+    

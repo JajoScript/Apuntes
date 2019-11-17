@@ -1,0 +1,541 @@
+// Apuntes Github
+
+// Sistema de control de versiones.
+    >Git
+
+// Git
+    -creado por Linus Torbal
+    -fundación linux.
+    -guarda los cambios del archivo.
+    -git permite guardar texto plano != binario (word)
+
+
+// Comandos.
+    $git init
+    : inicia un repositorio, para almacenar los cambios.
+    
+    $git add <archivo>
+    : agrega el archivo a la base de datos.
+    
+    $git add .
+    : agrega todos los archivos que han cambiado.
+    
+    $git rm --cached<file>
+    : cancela la vigilancia de cambios para ese archivo.
+
+    $git commit -m <mensaje>
+    : envia los cambios al controlador de versiones.
+    : es una buena practica colocar mensajes a los commits.
+    
+    $git status
+    : muestra el estado de los cambios y archivos.
+
+    $git show
+    : muestra todos los cambios historicos, informacion sobre los cambios.
+
+    $git log <file>
+    : muestra todos los cambios que se hicieron en el archivo.
+
+    $git log --stat
+    : muestra todos los cambios que se hicieron y muestra muchos mas datos al respecto.
+
+    $checkout 
+    :traer los cambios desde el repositorio a tu carpeta.
+
+    $git push
+    :enviar cambios o archivos a otro repositorio remoto.
+
+    $ git pull
+    : traer archivos o cambios desde otro repositorio remoto.
+
+    $git config
+    : muestra todas las configuraciones posibles para git.
+
+    $git config --list
+    : muestra todas la lista de configuraciones.
+
+    $git config --list --show-origin
+    : muestra los directorios de los archivos de configuraciones.
+
+    $git show <file>
+    :muestra los cambios del archivo.
+
+    $git diff <numero commit , version 2> <otro numero commit, version 1>
+    : compara las 2 versiones
+
+    $git reset <numero commit> --hard
+    : borra los cambios y regresa a una version anterior.
+
+    $git reset <numero commit> --soft
+    : regresa a esa version pero, lo que esta en el staying area aun se queda en el staying area. contrario a lo que ocurre en --hard.
+
+    $git checkout <numero de commit> <File>
+    : Regresa los cambios del archivo.
+    
+    $git rm --cached
+    : elimina los archivos del staying area.
+
+    $git rm --force
+    :elimina los archivos de git y del disco duro.
+
+    $git checkout <rama> <file>
+    : se va a la version mas actual de ese archivo. 
+
+// Configurar el usuario
+    $git config --global user.name <nombre>
+    : configura el nombre de la persona que hara los cambios.
+
+    $git config --global user.email <email>
+    : configura el correo de la persona que hara los cambios.
+
+// Terminar y linea de comandos.
+    Linux
+    : /c/Users/javier
+    
+    // Comandos
+    $ls -al
+    : lista de archivos incluso los ocultos.
+
+    $clear
+    : limpia la consola.
+
+    $cd <Carpeta>
+    : Entra a la carpeta.
+
+    $cd ..
+    : sale fuera de esa carpeta.
+
+    $pwd
+    : muestra el directorio donde te encuentras.
+
+    $touch <file>
+    : crea un archivo vacio.
+
+    $cat <file>
+    : muestra lo que tiene por dentro.
+
+    $history
+    : muestra una lista de los comandos usados.
+
+    $!<numero de history>
+    : repite ese comando.
+    
+    $rm <archivo>
+    : borrar archivo
+    : PRECAUCION SE PUEDE LLEGAR A BORRAR EL DISCO DURO CON ESTE
+        COMANDO SI ES MAL UTILIZADO.
+
+    $<comando> --help
+    : muestra las indicaciones de uso de los comandos.
+
+    $code
+    :abre una ventana de visual studio code.
+
+    // Shortcuts
+    Crtl + l
+    : limpia la consola.
+
+    Tab Tab
+    : muestra los directorios disponibles.
+
+    ESC + Shift + Z + Z
+    : para salir del editor de Git Bash
+
+    Crtl + Shift + R
+    :actualiza el cache
+
+    qq
+    : para salir cuando nos aparece (end)
+
+    // Caracteristicas.
+    simbolo ~ : en el hogar de los archivos
+    simbolo / : en el disco c:/
+    simbolo . : carpeta actual
+    simbolo .. : carpeta exterior
+    simbolo - : usar una/s letra/s
+    simbolo -- : usar una palabra
+
+    Windows
+    : c:/Users/javier
+
+// Editor de texto basado en consola de comandos.
+Vim
+    # : comentarios de vim
+    q : salir cuando no tengo espacio en el log.
+    
+// Staying
+al usar $git init se crea el staying area, staying es la memoria ram
+al usar $git add se envian los cambios al staying area.
+
+// Diff
+es mirar 2 versiones del mismo archivo 
+// estados del archivo
+    -untracked: no estan siendo visibles los cambios
+    -tracked : siendo vigilados los cambios.
+    -modified : archivo modificado.
+    -new file : nuevo archivo agregado.
+    
+// Ramas
+las ramas son romper lineas de tiempo para trabajar en paralelo
+    ejemplo:
+        -footer
+        -body
+        -header
+donde cada persona trabajara en rama segun su area de trabajo.
+
+nombres de Ramas usadas por lo general:
+    master : rama principal.
+    development : rama para probar y experimentar.
+    hotfix : rama para solucionar errores y bugs.
+
+// Entorno de desarrollo personal.
+    // Directorio de trabajo
+        Entorno de desarrollo personal
+        Lugar donde esta tu carpeta y archivos.
+
+        $git add
+        : envia los cambios al staging area.
+
+    // Preparacion o Staging
+        Lugar temporal donde se almacenan los cambios antes de
+        ser enviados al repositorio local.
+
+        garbage colector elimina los cambios que no son enviados al repositorio local.
+
+        $git commit
+        : envia los cambios al repositorio local.
+    // Repositorio local
+        Lugar donde son almacenados de manera permanente todas las versiones
+        creadas que son enviadas desde el staging area
+        
+        $git push
+        : envia los cambios guardados en el repositorio local al 
+        repositorio remoto.
+        
+        $git fetch
+        : trae los cambios del repositorio remoto al repositorio local,
+        pero no hace los cambios en el directorio de trabajo.
+
+        $git merge 
+        : agrega los cambios del repositorio local a los archivos del directorio
+        de trabajo.
+
+        $git pull
+        : es un fetch + merge, trae los cambios desde el repositorio remoto y los aplica en el repositorio local
+        y en los archivos del directorio de trabajo.
+
+// Servidor remoto
+    //Repositorio remoto
+        servidor ajeno donde se conectan las personas
+        o donde llegan todos los cambios
+
+        $git clone
+        : envia todos los cambios del repositorio remoto al 
+        directorio de trabajo (modificando los archivos)
+        y agregando los cambios al repositorio local.
+
+
+// Branches o ramas.
+aplicar cambios sin alterar las otras ramas
+
+    Master
+    :rama principal
+
+    Head
+    :commit mas reciente
+
+// Otros comandos
+$git commit -am <mensaje>
+: agrega todos los cambios y genera el commit, es para no escribir el git add
+
+// Creacion de ramas.
+$git branch
+: muestra la lista de ramas que existen.
+
+$git branch <nombre>
+: crea una rama paralela a la rama master.
+
+$git checkout <nombre de la rama>
+: para cambiar entre ramas.
+
+// Puntos a tener en cuenta.
+
+supongamos el caso de que modifico mi archivo y estoy en la rama diferente a master,
+mi nueva rama llamada Cabecera, si yo vuelvo a la rama master sin haber hecho commit
+a los archivos que modifique estando en la rama Cabecera, estos se perderan.
+(ya que, para git nunca ocurrieron.)
+
+Lo importante al hacer un merge es TRAER los cambios a la rama master
+y no llevar los cambios de master a la nueva rama.
+
+desde la rama master donde esta el head hacer el merge.
+
+$git merge <rama> <mensaje>
+: une la rama seleccionada con la rama donde usted se encuentre,
+y no al reves.
+
+antes de hacer un merge invocar a los dioses del desarrollo.
+
+al hacer un merge la rama sigue estando ahi.
+los merge funcionan en ambos sentidos
+
+// Estados de las ramas.
+(master | MERGING)
+: sucede cuando estamos en un estado intermedio del merge,
+donde no se pudo completar por un conflicto de archivos, el merging
+termina cuando se agregan los cambios aceptados.
+
+
+// syntaxis de un merge.
+<<<<<<<<<<<< HEAD 
+:lugar donde te encuentras, en la ultima version de la rama master.
+    <Codigo de head que produce conflicto>
+
+>>>>>>>>>>>> Contenido
+:rama diferente que se esta uniendo a tu rama actual.
+    <Codigo de contenido que podruce conflicto>
+
+// Conecction remote.
+$git remote add origin <http || ssh>
+: conectar el repositorio a un repositorio remoto.
+
+$git remote -v
+:nos muestra una lista de las conecciones remotas.
+un fetch para recibir cambios y un push para enviar
+
+$git push origin master
+: envia los cambios de la rama master del repositorio local al repositorio remoto
+
+$git pull origin master
+: traer todos los cambios del repositorio remoto al repositorio local.
+
+$git pull origin master --allow-unrelated-histories
+: esto es un caso especifico para solucionar el error
+"fatal: refusing to merge unrelated histories"
+que significa algo a si como:
+"me reuso a combinar estas 2 historias"
+
+$git config -l
+: muestra todos las configuraciones de mi git.
+
+github relaciona tu correo de las configuraciones con un correo
+registrado en github
+
+en github, blame sirve para ver quien hizo los cambios.
+
+// LAVES
+llaves publicas y llaves privadas.
+coneccion de un solo camino
+    el usuario1 envia la llave publica al usuario2 y este cifra contenido
+    con esa llave publica, el usuario1 que recibe el mensaje cifrado
+    lo decifra con su llave privada.
+
+coneccion de doble camino es lo mismo pero con 2 llaves privas y 2 llaves publicas
+pero de cada usuario.
+
+// ssh
+$ssh-keygen -t rsa -b 4096 -C "<correo>"
+: genera una llave ssh
+     -t rsa especifica el algoritmo
+        :rsa es un tipo de algoritmo
+     -b 4090 significa la complejidad del cifrado
+        :4090 tiene que ver con terminos matematicos.
+     -C es para vincularla a un correo
+
+    // passphrase
+    es una forma fancy de decir "una contraseña con espacios"
+    : es para vincular una clave de texto a la llave ssh
+
+    id_rsa
+    : es la llave privada (seria estupido que la mostrara)
+
+    id_rsa.pub
+    : es la llave publica
+
+    $eval $(ssh-agent -s)
+    : es para comprobar los servidores de ssh si estan corriendo.
+
+    $ssh-add <ruta de la llave privada>
+    : agrega la llave ssh al servidor
+
+    $git remote set-url origin <ruta ssh>
+    : conecta con la ruta
+
+    ~
+    : se puede usar para avanzar de manera rapida en los directorios.
+
+$git pull orign master
+: trae los archivos de la rama origin del repositorio remoto al
+repositorio local.
+
+// etiquetas
+$git log --all --graph --decorate --oneline
+: muestra visualmente las ramas de todos los cambios realizados.
+
+$alias <nombre>="<comando>"
+: esto es parte de linux, es para guardar un comando largo en una sola palabra.
+
+$git tag -a <nombreTag> -m "<Mensaje>" <numeroCommit>
+Example:
+$git tag -a v0.1 -m "Resultado de las primeras clases del curso" 836eb5a
+: este comando es para crear una etiqueta de git.
+
+$git show-ref --tags
+: te muestra los tags.
+
+$git push origin --tags
+: envia los tags a github.
+
+$git tag
+: muestra los tags que existen.
+
+$git tag -d <nombreTag>
+: elimina el tag
+
+$git push origin :refs/tags/dormido
+: borra internamente los tags de github.
+
+$git show-branch --all
+:muestra la informacion sobre las ramas.
+
+$gitk
+: abre un software para entregarte informacion sobre las ramas
+
+$git push origin <rama>
+: envia la rama al repositorio remoto
+
+$git clone <rutaSSH | rutaHTTPS>
+: clona el repositorio remoto y lo trae al entorno local.
+
+Pull request: es un estado anterior al merge, en el que un programador solicita a otros miembros del equipo que revisen los cambios hechos a los archivos. 
+
+Travis CI
+Jenkins
+
+// gitignore
+* : todos los archivos
+ejemplo: *.jpg 
+: ignora todas las imagenes .jpg
+
+// Rebase
+es una mala practica, debe usarse solo en local y no en remoto.
+rebase elimina una rama y todo su contenido lo pega en la rama master.
+
+// Stash
+guarda un commit temporalmente en la memoria ram y limpia
+el archivo para hacer correctamente el commit.
+
+para usos donde se este experimentando y sean experimentos que no requieran
+una rama completa.
+
+$git stash
+: guarda los cambios de manera temporal
+
+$git pop
+: regresa los cambios que fueron guardados de manera temporal
+
+$git stash list
+: muestra los stashs guardados.
+
+$git stash branch <rama>
+: crea una nueva rama donde guardar el stash
+
+$git stash drop
+: elimina lo que este guardado en stash 
+
+// CLEAN
+git clean limpia los archivos que son innecesarios para tiempo
+obviamente no borra los archivos de gitignore.
+
+$git clean --dry-run
+:simula lo que se va a borrar
+
+$git clean -f
+: limpia
+
+//  Cherry-pick
+trae un commit viejo a una version mas adeltanda de una rama
+genera conflictos al hace merge, nada dificil.
+
+$git cherry-pick <numeroCommit>
+: trae un commit de una rama hasta la rama donde estas situado.
+
+// Reconstruir un commit.
+git commit --amend
+: agrega otros cambios a un commit creado anterior mente
+
+// Caso: todo se rompe.
+$git reflog
+:muestra TODA la informacion de los commits.
+
+$git reset HEAD@{4}
+: vuelve al punto asignado.
+
+$git reset --hard abb7491
+: vuelve al commit asignado borrando todos los cambios 
+que se realizaron despues de este.
+
+// grep
+$git grep <palabra>
+:busca la palabra indicada en los archivos
+
+$git grep -n <palabra>
+:busca la palabra indicada en los archivos junto con la linea.
+
+$git grep -c <palabra>
+:busca la palabra indicada en los archivos y te entrega la cantidad
+de veces que sale en un archivo.
+
+$git log -S "<palabra>"
+: busca la palabra en los commits 
+
+$git shortlog
+: muestra los comits echos por cada persona.
+
+$git shortlog -sn
+: muestra el numero de comit de cada persona.
+
+$git shortlog -sn -all
+: muestra todos los commits realizador por cada persona incluso los borrados.
+
+$git shortlog -sn -all --no-merges
+: muestra todos los commits realizador por cada persona incluso los borrados
+y no cuenta los merges.
+
+$git config --global alias.stats "shortlog -sn --all --no-merges"
+: crea un shortcut del comando.
+
+$git blame <file>
+: muestra quien hizo que cosa en el archivo.
+
+$git blame -c <file>
+: muestra quien hizo que cosa en el archivo y lo deja
+mas bonito.
+
+$git <comando> --help
+: muestra la ayuda del comando.
+
+$git blame <archivo> -L<line>,<line>
+: muestra quien hizo que en el rango de lineas asignado.
+
+$git branch -r
+: muestra las ramas remotas
+
+$git branch -a
+: muestra todas las ramas segun colores,
+verde, actual.
+roja, remotas.
+blanca, locales.
+
+// automatizacion
+    Jenkins
+    TeamCity
+    Travis CI
+
+// Configuration management
+    Chef
+    Puppet
+    Ansible
+
+// Compute visuality
+    

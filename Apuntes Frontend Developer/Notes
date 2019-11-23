@@ -1,0 +1,224 @@
+// Conceptos Basicos
+Internet 
+    : Suma de 2 palabras Interconection + network
+    Internet es la interconexion de muchos computadores.
+
+WWW
+    : World Wide Web
+    es la conexion de internet.
+
+HTTP
+    : Hyper Text Transfer Protocol
+    http es un protocolo por el cual se envian y conectan
+    las paginas web.
+
+// Frontend
+Dom
+    : Document Object Model
+    transformacion del codigo html a objetos entendibles 
+    por el navegador.
+
+Render Tree
+    : Proceso de Renderizado.
+
+Cssom
+    : El Dom de CSS
+    que tansforma codigo css a objetos entendibles por el
+    navegador.
+
+// Proceso de Renderizacion.
+---------------
+Bytes > Characters > Tokens > Nodes > DOM
+---------------
+1:
+    unidad minima de la informacion entregada por el informacion
+    descifrada por el html.
+2:
+    Representacion de los bytes como caracteres html.
+3:
+    Construccion basica de cada objeto reconocible por el navegador.
+4:
+    Coneccion entre los objetos relacionados.
+5: 
+    Representacion de conexiones entre cada etiqueta segun perentezco.
+
+//Pasos que hace el navegador.
+1:
+    Procesa el HTML y construye el DOM.
+2:
+    procesa el CSS y construye el CSSDOM.
+3:
+    DOM + CSSDOM = Render Tree.
+4:
+    Ejecuta el diseño en el render tree.
+5:
+    Pinta el nodo en la pantalla.
+
+// Anatomia de un elemento HTML.
+------
+<Prueba> Hola </Prueba>
+    1      2     3
+1: etiqueta de apertura.
+2: contenido.
+3: etiqueta de cierre.
+4: elemento.
+    : la suma de 1 2 3.
+------
+<Prueba Class="Hola">
+    1     2     3
+1: etiqueta de apertura.
+2: Atributo.
+3: Valor del atributo. (tiene que ir en comillas)
+------
+*Atributos Vacios : Aquellos que no necesitan de contenido.
+------
+<!DOCTYPE html>
+    : se preocupa que el documento sea interpretado de la misma manera
+    para todas las paginas.
+
+<meta charset="UTF-8">
+    :Codificacion de caracteres.
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    : compatibilidad con dispositivos moviles.
+
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    : compatibilidad con el navegador edge.
+
+<head>
+    : lugar para meta informacion , informacion no visible para el usuario.
+
+<body>
+    : todo lo visible para el usuario.
+
+<html>
+    : toda la informacion presente en la pagina.
+
+<style>
+    : lugar para codigo CSS.
+
+<script>
+    : lugar para codigo JavaScript.
+
+<div>
+    : divicion.
+
+<p>
+    : parrafo.
+
+<h1>
+    : Titulo principal, llega hasta h6
+
+<i>
+    : le da fuente italic al conetenido.
+
+<em>
+    : le da enfacis al conetenido.
+-------------
+// Codigo semantico
+: usar se manera correcta las etiquetas segun su propio uso.
+
+<header> : .
+<section> : una seccion para lo que quieras.
+<footer> : pie de pagina.
+: Secciones que dividen una pagina web.
+----------
+HTML es un lenguaje interpretado.
+*Errores sintacticos : Errores de sintaxys.
+*Errores logicos: errores humanos.
+------
+Sistema de validación de etiquetas.
+validator.w3.org
+    : un detector que te dice donde estan tus errores en html.
+
+---
+// Codigo CSS
+p{
+    color:red;
+}
+
+p (selector){
+    color(propiedad):red(valor);
+}
+----
+// Tipos de selectores.
+*
+    : universal, o global para cada elemento.
+h1
+    : tipo, o por etiquetas.
+.ejemplo
+    : Clase, o identificador grupal.
+#ejemplo
+    : Id, o identificador unico.
+-----
+//Pseudo-clases
+p: first-child{}
+    : se aplica al primer p.
+p: last-child{}
+    : se aplica al ultimo p.
+p: nth-child(2n){}
+    : se aplica a todos los pares segun al ecuacion 2n.
+    otro ejemlo seria a (2n - 1) que aplicaria a los impares.
+
+//Pseudo-elementos
+::before
+::need-more
+::after
+
+//Modelo de caja
+1.margin
+    2.border
+        3.padding
+
+se mueven en sentido horario.
+10px 20px 30px 40px
+
+//Medidas absolutas.
+    cm, px, in, mm, pt y pc.
+
+//Medidas Relativas.
+    vmax, em, ch, ex, rem, vmin, vw y vh.
+
+// Codigo
+Predecible
+Escalable
+Mantenible
+
+// Buenas Prácticas.
+Establecer Reglas.
+Explicar estructura base.
+Establecer estanderes de Codificacion.
+Evitar largas hojas de estilo.
+Documentación.
+
+// Metodologias CSS
+OOCSS
+    : css orientado a objetos, utilizar clases.
+
+BEM
+    : block element modificadores, Ejemplo: "header__button--red"
+
+SMACSS
+    : Arquitectura de CCSS escalable y modular. divir en componentes bases. Base, layout, module, state, theme = SMACSS
+
+ITCSS
+    : dividir archivos css en partes, ajustes,herramientas, genericos etc...
+
+Atomic Design
+    : Atomos, Moleculas, Organismos, Templates, Paginas.
+
+// componentes
+Elemento muy pequeño que se puede reutilizar para crear mas componentes.
+
+// Storybook
+documentacion muy visual de los componentes.
+
+// Flexbox
+no es necesario otras dependencias.
+
+importante siempre relacionarlo con container e items.
+posicionar de izquierda a derecha.
+
+// CSS Grid
+columnas y filas aplicadas a css.
+Desde cs3 disponible.

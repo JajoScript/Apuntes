@@ -1,0 +1,162 @@
+//ReactJS
+-Desarrollado por Facebook
+-Estructura basada en componentes.
+
+// Virtual DOM?
+el virtual DOM es una copia fiel del DOM, permite identificar
+cada elemento y refrezca solo aquellos elemntos del DOM
+que fueran modificados.
+
+// Buenas practicas
+-Colocar el nombre del archivo de un componente de react con mayuscula.
+ej: Stateful.js -> ya que la comunidad asi lo tiene conocido.
+
+// 3 Principales componentes.
+1.Stateful
+: Componente más completo, con ciclo de vida estados propios y mucho más.
+
+2.Stateless
+: Componente basico, sin estados propios con ciclo de vida...
+: Permite la creacion de variables antes del return.
+
+3.Presentacional
+: Retorna html que se necesite, muy basico.
+
+// JSX : JavaScript + Html.
+Complementa todo en el mismo archivo, y no funcionar de manera diferente.
+
+un archivo puede tener la extencion jsx.
+
+se usan las {} para referenciar variables en jsx.
+
+todas las etiquetas que se aperturen y no tengan contenido dentro deben terminar en />
+
+Tenemos 2 formas para hacer comparaciones logicas:
+ { isTrue ? <h4>Esto es Verdadero!</h4> : <h4>Esto es Falso!</h4> }
+  { isTrue && <h4>Esto es Verdadero!</h4> }
+
+// PROPS
+se envia un dato tipo de texto como prop.
+
+<Componente propDePrueba="texto de prueba" />
+los props se definen como si fueran atributos html.
+
+hay 2 formas de recibir y usar los props.
+1. siendo props un elemnto recibido por el componente Stateless.
+<button type="button" >{props}</button>
+
+2. destructuracion props antes del return.
+const { texto } = props;
+
+2.1
+<button type="button>{ texto }</button>
+: De esta forma podemos recibir e instanciar de maneras diferentes todos los props que nos envien.
+
+// Ciclo de Vida del componente.
+Es un proceso que React hace en cada componente,
+en algunos casos no podemos verlos como un bloque de código 
+y en otros podemos llamarlos en nuestro componente 
+para asignar una actividad según sea el caso necesario.
+
+Los componentes en react pasan por un Montaje,
+Actualización, Desmontaje y Manejo de errores.
+
+// Montaje.
+En esta fase nuestro componente se crea junto a la lógica
+y los componentes internos y luego es insertado en el DOM.
+
+// Actualización.
+En esta fase nuestro componente está al pendiente de cambios
+que pueden venir a través de un cambio en “state” o “props” 
+esto en consecuencia realizan una acción dentro de un componente.
+
+// Desmontaje.
+En esta etapa nuestro componente “Muere” cuando nosotros 
+no necesitamos un elemento de nuestra aplicación, 
+podemos pasar por este ciclo de vida y de esta forma eliminar 
+el componente de la representación que tiene en el DOM.
+
+//Manejo de Errores.
+Cuando nuestro código se ejecuta y tiene un error, 
+podemos entrar en una fase donde se puede entender 
+mejor qué está sucediendo con la aplicación.
+
+Algo que debemos tener en cuenta es que un componente 
+NO debe pasar por toda las fases, 
+un componente puede ser montado y desmontado sin pasar 
+por la fase de actualización o manejo de errores.
+
+Ahora que entendemos las fases que cumple el ciclo de vida 
+en React vamos a entrar a detalle en cada uno de ellos para 
+ver qué piezas de código se ejecutan y nos ayudarán a crear 
+aplicaciones en React pasando por un ciclo de vida bien 
+estructurado.
+
+//Montado.
+
+1. Constructor()
+    : Este es el primer método al que se hace un llamado,
+    aquí es donde se inicializan los métodos controladores,
+    eventos del estado.
+
+2. getDerivedStateFromProps()
+    :Este método se llama antes de presentarse en el DOM
+    y nos permite actualizar el estado interno en respuesta 
+    a un cambio en las propiedades, es considerado un método 
+    de cuidado, ya que su implementación puede causar errores 
+    sutiles.
+
+3. render()
+    :Si queremos representar elementos en el DOM en este método
+    es donde se escribe esta lógica, usualmente utilizamos JSX 
+    para trabajar y presentar nuestra aplicación.
+
+4. ComponentDidMount()
+    :Este método se llama inmediatamente que ha sido montado en 
+    el DOM, aquí es donde trabajamos con eventos que permitan 
+    interactuar con nuestro componente.
+
+// Actualizacion.
+1. getDerivedStateFromProps()
+    :Este método es el primero en ejecutarse en la fase de 
+    actualización y funciona de la misma forma que en el montaje.
+
+2. shouldComponentUpdate()
+    :Dentro de este método se puede controlar la fase de 
+    actualización, podemos devolver un valor entre verdadero o 
+    falso si queremos actualizar o no el componente y es 
+    utilizado principalmente para optimización.
+
+3. render()
+    :Se llama el método render que representa los cambios en el DOM.
+
+4. componentDidUpdate()
+    :Este método es invocado inmediatamente después de que el 
+    componente se actualiza y recibe como argumentos las 
+    propiedades y el estado y es donde podemos manejar nuestro 
+    componente.
+
+// Desmontado.
+1. componentWillUnmount()
+    :Este método se llama justo antes de que el componente 
+    sea destruido o eliminado del DOM.
+
+//Manejo de Errores.
+1. getDerivedStateFromError()
+    :Una vez que se lanza un error este es el primer método 
+    que se llama, el cual recibe el error como argumento y 
+    cualquier valor devuelto en este método es utilizado 
+    para actualizar el estado del componente.
+
+2. componentDidCatch()
+    :Este método es llamado después de lanzarse un error 
+    y pasa como argumento el error y la información representada
+    sobre el error.
+
+// State
+que es un estado?
+el estado es un objeto al que le podemos definir variables de 
+cualquier tipo y podemos acceder a ellas en el momento que se 
+inicializa nuestro componente.
+
+uso de Camelcase en html para react.

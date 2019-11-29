@@ -1,0 +1,117 @@
+// JavaScript
+*Utilizar la consola de google chrome para ejecutar el codigo.
+>no es obligatorio usar el ;.
+Lenguaje debilmente tipado.
+* Es posible cambiar el tipo de dato de una variable durante el codigo.
+
+// Palabras reservadas.
+var, function
+---------------------
+//Variables
+var <nombreVariable> = <Value>;
+: definir una variable, en javascript el valor que posee dicha Variables
+es quien asigna el tipo de variable.
+
+var <nombreVariable1> = <value>, var <nombreVariable2> = <value2>
+: se pueden definir varias variables en una misma linea.
+
+//String
+var Nombre = "Javier";
+
+// Int
+var Numero = 10;
+
+// Float
+var Numero = 4.5;
+
+// Boolean
+var Dato = true;
+var Dato = false;
+
+----------
+// Concatenar Strings
+"string", <variable>;
+"string" + <variable>;
+`string ${variable}`;
+: dentro de ${} se puede usar codigo JavaScript.
+
+------------
+// Funciones.
+$console.log("<mensaje>");
+: Muestra un mensaje por la consola.
+
+// String
+<var>.toUpperCase();
+: Transforma un string a Mayusculas.
+
+<var>.toLowerCase();
+: Transforma un string a minusculas.
+
+<var>.charAt(<position>);
+: imprime el caracter de la posicion dada como parametro.
+
+<var>.length
+: regresa el valor del tamaño de la variable.
+
+<var>.substr(<positionInicial>, <positionFinal>);
+: las posiciones deben ser ints, crea un string.
+-----------------
+// ints
+
+//Incrementos 
+<var> += 1;
+: suma 1 al valor de var.
+
+<var> = <var> + 1
+: suma 1 al valor de var.
+
+// Decrementos.
+<var> -=1
+: le resta 1 al valor de var.
+
+<var> = <var> - 1
+: le resta 1 al valor de var.
+
+<var> * 4
+: multiplica por 4.
+
+<var> / 4
+: divide por 4.
+* la division de enteros no retorna un resultado con decimales.
+
+<var> = Math.round(<valor>)
+: redondea el valor.
+
+<var>.toFixed(3)
+: Trunca a 3 decimales.
+
+<var> = parseFloat(<string>)
+: transformar de un string a decimal.
+
+// Creando Funciones.
+
+function <nombreFuncion>(<parametro>){
+    // Codigo
+}
+: creacion de una funcion.
+
+<nombrefuncion>(<parametro>);
+: llamada a una funcion.
+: se pueden pasar parametros vacios.
+: al no pasar todos los parametros, que te falte uno, retorna un undefine.
+: despues que la funcion ejecute el codigo y deje de utilizar las variables locales, estas se eliminan y dejan de estar definidas.
+: se puede usar una variable global como si fuera una variable local, conservando su valor global.
+
+// JSON : JavaScript Object Notation
+<var> = {
+    <key> : "<value>",
+    <key2> : "<value2>"
+}
+: estructura de un objeto.
+: es necesario un objeto y su valor. 
+
+<var>.<key>
+: para ver el valor que contiene el objeto var en key.
+
+function <functionname>({ key> })
+: se puede pedir como parametro una key del objeto.

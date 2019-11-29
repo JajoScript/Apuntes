@@ -1,0 +1,72 @@
+// Curso profesional de javascript.
+El camino para convertirse en senior.
+
+- Conocimiento del lenguaje.
+: Fundamentos, no-Fundamentos, cómo funciona.
+> No-Fundamentos 
+    Promesas, Getters, Setters, Proxies, Generadores.
+> Cómo Funciona.
+    JavaScript Engine, Herencia Prototipal, Event Loop.
+
+- Conocimiento de los entornos de programación.
+: Browser, DOM API.
+
+- Versado en codigo.
+: Hay que leer Código, Mucho, Constantemente.
+
+- Mejores prácticas.
+: No reinventamos la rueda, probamos nuestro código.
+
+- Ética y profesionalismo.
+: Ser responsable, entrega a tiempo, sabe decir que no, no hace daño.
+
+- Experiencia.
+: nada le gana a esto, no se puede enseñar, esta en ti, perseverancia.
+
+- Herramientas.
+
+// DomContentLoaded
+todo el contenido se cargo y esta listo para manipular
+
+// Scripts Externos o embebidos.
+cuando el dom encuentra los scripts se deja de leer elemntos html para leer los scripts.
+luego de leerlos sigue procesando el resto de elementos html.
+
+se debe tener en cuenta que si los scripts necesitan un elemtno que aun no a sido procesando,
+retornara un type error ya que este elemento se encuentra despues de los scripts y aun no ha sido procesado.
+
+// Scripts externos (Async)
+cuando se tiene un script asincrono el procesador de DOM no se detiene
+esta zona es llamada script fetching donde se leen los scripts que esperan una respuesta.
+
+en el momento que el script recibe dicha respuesta se ejecuta el script, es cuando el DOM se detiene.
+
+// Scripts externos (defer)
+con defer podemos posponer la ejecucion de los scripts para que ocurran al final del procesamiento del DOM.
+por lo que se lee normalmente el script fetching y su contenido sin detener el procesamiento del DOM,
+dejando al final la ejecucion de los scripts.
+
+//Scope
+representa el tiempo de vida de una variable.
+evita que sin querer reescribamos una variable ya definida.
+
+Scope Global.
+var nombre = "javier"
+window.nombre -> tra el valor de la variable.
+
+//function Scope
+var opera sobre la funcion.
+
+//block Scope
+let opera sobre block scope, cada vez que itera el block se recuerda el valor de la iteracion,
+
+//Module scope.
+type="module", los valores del archivo dejan de estar definidos y son limitidos por 
+el scope.
+
+// Closure
+Un closure o clausura es la combinación de una función
+y el ámbito léxico en el que se declaró dicha función. 
+Es decir los closures o clausuras son funciones que manejan,
+variables independientes. En otras palabras, la función definida,
+en el closure “recuerda” el ámbito en el que se ha creado.

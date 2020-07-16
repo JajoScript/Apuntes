@@ -1,0 +1,22 @@
+[
+    {
+        "correo": "JavierAlmarza@gmail.com",
+        "id": 1,
+        "nombre": "Javier"
+    },
+    {
+        "correo": "qxuxamanolo@gmail.com",
+        "id": 2,
+        "nombre": "Manolo"
+    },
+    {
+        "correo": "Jack@gmail.com",
+        "id": 3,
+        "nombre": "Jack"
+    },
+    {
+        "correo": "vichin@gmail.com",
+        "id": 6,
+        "nombre": "vicho"
+    }
+]
